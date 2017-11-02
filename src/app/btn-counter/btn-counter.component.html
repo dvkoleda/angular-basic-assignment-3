@@ -1,0 +1,11 @@
+<div>
+  <button
+    class="btn btn-primary"
+    (click)="onBtnClick()">
+    Add server
+  </button>
+  <p *ngIf="isVisibleMsg">Some content</p>
+  <div *ngFor="let msg of logMsgs">
+    <div [ngClass]="{blueBackground: (msg.number % 5) === 0}">{{ msg.timeStamp }}</div>
+  </div>
+</div>
